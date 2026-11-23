@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixel Shooter 3D — Sobrevivência Top-Down em 3D</title>
+  <meta name="description" content="Enfrente hordas de monstros em 5 biomas, desbloqueie 18 armas, personalize seu soldado 3D e derrote chefões épicos em Pixel Shooter 3D." />
+  <link rel="icon" type="image/png" href="./assets/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <img src="./assets/img/logo.png" alt="Logo Pixel Shooter 3D" />
+        <span>Pixel Shooter 3D</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#viewer">Vídeo 3D</a>
+        <a href="#chapters">Capítulos</a>
+        <a href="#download">Download</a>
+      </nav>
+      <a href="#download" class="btn btn-primary btn-sm">Baixar Agora</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge"><span class="dot"></span> Godot 4 · PC &amp; Android</div>
+          <h1>Sobreviva às hordas em <span class="gradient-text">Pixel Shooter 3D</span></h1>
+          <p>
+            Ação frenética em arena 3D com visão inclinada. Enfrente 25 missões e o Modo Infinito,
+            desbloqueie um arsenal de 18+ armas, combine cartas de poder e derrote chefões gigantescos.
+          </p>
+          <div class="hero-actions">
+            <a href="https://drive.google.com/file/d/1FDAJ5F32whRf1VELcc9sfDxN9A52-_dE/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              ⬇ Download PC (Windows)
+            </a>
+            <a href="https://drive.google.com/file/d/1Xs8Mi1DZG39dFumlDPgWpikmeHS5JeZY/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              📱 Download Android (APK)
+            </a>
+            <a href="#viewer" class="btn btn-secondary">
+              🎬 Ver Vídeo 3D
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <strong>18+</strong>
+              <span>Armas na Loja</span>
+            </div>
+            <div class="stat-item">
+              <strong>32</strong>
+              <span>Monstros &amp; Chefes</span>
+            </div>
+            <div class="stat-item">
+              <strong>5</strong>
+              <span>Biomas Únicos</span>
+            </div>
+            <div class="stat-item">
+              <strong>25+</strong>
+              <span>Missões &amp; Infinito</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card">
+            <img src="./assets/img/hero-art.png" alt="Arte promocional de Pixel Shooter 3D" />
+            <div class="hero-card-overlay">
+              <div>
+                <strong>Bestiário &amp; Arsenal 3D</strong>
+              </div>
+              <span>GL Compatibility · 60 FPS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D Video Showcase -->
+    <section id="viewer" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2>Arsenal &amp; Gameplay</h2>
+            <p>Explore todas as 18 armas do jogo em 3D, compare dano, cadência e alcance e assista ao trailer.</p>
+          </div>
+        </div>
+
+        <div class="viewer-shell">
+          <div class="viewer-toolbar">
+            <div class="tabs">
+              <button class="tab-btn active" data-category="weapons">Armas (18)</button>
+              <button class="tab-btn" data-category="trailer">Trailer Gameplay</button>
+            </div>
+          </div>
+
+          <div class="viewer-main">
+            <div class="canvas-wrap" id="canvas-wrap">
+              <video id="showcase-video" autoplay loop muted playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback"></video>
+              <div class="video-fallback hidden" id="video-fallback">
+                <span class="video-fallback-badge">Trailer em Breve</span>
+                <h4>Trailer oficial em produção</h4>
+                <p>Adicione o arquivo do trailer em:</p>
+                <code id="video-fallback-file">website/assets/videos/trailer.mp4</code>
+              </div>
+            </div>
+
+            <aside class="inspector">
+              <div>
+                <span class="inspector-tag" id="inspector-tag">Showcase Oficial</span>
+                <h3 id="inspector-title">Trailer Gameplay 3D</h3>
+                <p class="inspector-desc" id="inspector-desc"></p>
+                <div class="stats-grid" id="inspector-stats"></div>
+                <ul class="feature-list" id="inspector-features" style="display:none;"></ul>
+              </div>
+              <div class="palette-row" id="inspector-palette" style="display:none;"></div>
+            </aside>
+          </div>
+
+          <div class="model-selector" id="model-selector"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapters -->
+    <section id="chapters" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2>5 Capítulos &amp; Biomas</h2>
+            <p>Cada capítulo traz novos perigos de mapa, inimigos exclusivos, mini-chefes e batalhas de chefão.</p>
+          </div>
+        </div>
+        <div class="chapters-grid" id="chapters-grid"></div>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section id="download" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2>Baixar Pixel Shooter 3D</h2>
+            <p>Escolha sua plataforma e entre na arena. Progresso salvo localmente e suporte a mira automática ou manual.</p>
+          </div>
+        </div>
+
+        <div class="download-grid">
+          <div class="download-card featured">
+            <div>
+              <div class="platform-head">
+                <span class="platform-badge">WINDOWS · 64-BIT</span>
+                <span class="platform-badge">v4</span>
+              </div>
+              <h3>Versão para PC</h3>
+              <ul class="download-meta" style="margin-top: 14px;">
+                <li>• Suporte a teclado + mouse (mira manual ou automática)</li>
+                <li>• HUD configurável em tempo real e sombras ajustáveis</li>
+                <li>• Arquivo: <code>Pixel Shooter 3D pc v4.exe</code></li>
+              </ul>
+            </div>
+            <a href="https://drive.google.com/file/d/1FDAJ5F32whRf1VELcc9sfDxN9A52-_dE/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary">⬇ Baixar para Windows</a>
+          </div>
+
+          <div class="download-card">
+            <div>
+              <div class="platform-head">
+                <span class="platform-badge">ANDROID · ARM64</span>
+                <span class="platform-badge">v6.1</span>
+              </div>
+              <h3>Versão Mobile (APK)</h3>
+              <ul class="download-meta" style="margin-top: 14px;">
+                <li>• Joystick virtual e botão de habilidade personalizáveis</li>
+                <li>• Opção de desligar sombras para celulares mais simples</li>
+                <li>• Arquivo: <code>PixelShooter3D v6.1.apk</code></li>
+              </ul>
+            </div>
+            <a href="https://drive.google.com/file/d/1Xs8Mi1DZG39dFumlDPgWpikmeHS5JeZY/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">📱 Baixar APK Android</a>
+          </div>
+        </div>
+
+        <div class="controls-bar">
+          <strong>Controles no PC:</strong>
+          <div class="controls-list">
+            <span><kbd>WASD</kbd> / Setas: Mover</span>
+            <span><kbd>Q</kbd>: Trocar arma</span>
+            <span><kbd>Shift</kbd> / <kbd>E</kbd>: Habilidade</span>
+            <span><kbd>M</kbd>: Mudo</span>
+            <span><kbd>Esc</kbd>: Configurações</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span><strong>Pixel Shooter 3D</strong> — Desenvolvido em Godot 4</span>
+      <span>Ação Top-Down 3D · PC &amp; Android</span>
+    </div>
+  </footer>
+
+  <!-- Download Modal -->
+  <div class="modal-backdrop" id="download-modal">
+    <div class="modal">
+      <h3 id="modal-title">Download</h3>
+      <p id="modal-text"></p>
+      <code id="modal-file"></code>
+      <button class="btn btn-primary" id="modal-close" style="width: 100%;">Entendi</button>
+    </div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
