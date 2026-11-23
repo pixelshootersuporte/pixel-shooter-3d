@@ -155,7 +155,7 @@ function openDownloadModal(platform) {
   if (platform === 'pc') {
     modalTitle.textContent = 'Download para Windows (PC)';
     modalText.textContent = 'Versão desktop gerada em Godot 4. Para publicar online, hospede o executável (ou .zip da pasta builds) e aponte este botão para o link de download.';
-    modalFile.textContent = 'builds/Pixel Shooter 3D pc v4.exe';
+    modalFile.textContent = 'builds/Pixel Shooter 3D pc v6.1.exe';
   } else {
     modalTitle.textContent = 'Download para Android (APK)';
     modalText.textContent = 'Versão mobile arm64-v8a com controles por toque e mira configurável. Exporte o APK no Godot e hospede-o para liberar o download direto.';
