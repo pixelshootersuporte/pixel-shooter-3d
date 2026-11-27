@@ -42,8 +42,8 @@
             <a href="https://drive.google.com/file/d/1FDAJ5F32whRf1VELcc9sfDxN9A52-_dE/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
               ⬇ Download PC (Windows)
             </a>
-            <a href="https://drive.google.com/file/d/1Xs8Mi1DZG39dFumlDPgWpikmeHS5JeZY/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              📱 Download Android (APK)
+            <a href="#download" class="btn btn-secondary" data-download="android">
+              📱 Jogar no Android (Play Store)
             </a>
             <a href="#viewer" class="btn btn-secondary">
               🎬 Ver Vídeo 3D
@@ -172,17 +172,21 @@
           <div class="download-card">
             <div>
               <div class="platform-head">
-                <span class="platform-badge">ANDROID · ARM64</span>
-                <span class="platform-badge">v6.1</span>
+                <span class="platform-badge">PLAY STORE · TESTE FECHADO</span>
+                <span class="platform-badge">v6.2</span>
               </div>
-              <h3>Versão Mobile (APK)</h3>
+              <h3>Versão Android (Google Play)</h3>
               <ul class="download-meta" style="margin-top: 14px;">
-                <li>• Joystick virtual e botão de habilidade personalizáveis</li>
-                <li>• Opção de desligar sombras para celulares mais simples</li>
-                <li>• Arquivo: <code>PixelShooter3D v6.1.apk</code></li>
+                <li>• Siga os 3 passos abaixo usando o <strong>mesmo Gmail</strong>:</li>
+                <li>• 1º Entre no grupo de testadores</li>
+                <li>• 2º Aceite o convite na Web e baixe na Play Store</li>
               </ul>
             </div>
-            <a href="https://drive.google.com/file/d/1Xs8Mi1DZG39dFumlDPgWpikmeHS5JeZY/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">📱 Baixar APK Android</a>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <a href="https://groups.google.com/g/testadores-pixel-shooter3d-3d" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">1. Entrar no Grupo de Testadores</a>
+              <a href="https://play.google.com/apps/testing/com.pixel.shooter3d" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">2. Aceitar Convite (Web)</a>
+              <a href="https://play.google.com/store/apps/details?id=com.pixel.shooter3d" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">3. Baixar na Play Store</a>
+            </div>
           </div>
         </div>
 
@@ -210,10 +214,14 @@
   <!-- Download Modal -->
   <div class="modal-backdrop" id="download-modal">
     <div class="modal">
-      <h3 id="modal-title">Download</h3>
-      <p id="modal-text"></p>
-      <code id="modal-file"></code>
-      <button class="btn btn-primary" id="modal-close" style="width: 100%;">Entendi</button>
+      <h3 id="modal-title">Jogar no Android (Play Store)</h3>
+      <p id="modal-text">Para baixar pela Play Store durante o teste fechado, siga os 3 passos na ordem usando o <strong>mesmo Gmail</strong>:</p>
+      <div id="modal-links" style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;">
+        <a href="https://groups.google.com/g/testadores-pixel-shooter3d-3d" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">1. Entrar no Grupo (Google Groups)</a>
+        <a href="https://play.google.com/apps/testing/com.pixel.shooter3d" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">2. Aceitar Convite de Testador (Web)</a>
+        <a href="https://play.google.com/store/apps/details?id=com.pixel.shooter3d" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">3. Baixar na Google Play Store</a>
+      </div>
+      <button class="btn btn-secondary" id="modal-close" style="width: 100%;">Fechar</button>
     </div>
   </div>
 

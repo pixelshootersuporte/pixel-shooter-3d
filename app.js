@@ -144,30 +144,14 @@ chaptersGrid.innerHTML = CHAPTERS.map(
 `
 ).join('');
 
-// Download Modal
+// Download Modal (Android Play Store Teste Fechado)
 const modal = document.getElementById('download-modal');
-const modalTitle = document.getElementById('modal-title');
-const modalText = document.getElementById('modal-text');
-const modalFile = document.getElementById('modal-file');
 const modalClose = document.getElementById('modal-close');
 
-function openDownloadModal(platform) {
-  if (platform === 'pc') {
-    modalTitle.textContent = 'Download para Windows (PC)';
-    modalText.textContent = 'Versão desktop gerada em Godot 4. Para publicar online, hospede o executável (ou .zip da pasta builds) e aponte este botão para o link de download.';
-    modalFile.textContent = 'builds/Pixel Shooter 3D pc v6.1.exe';
-  } else {
-    modalTitle.textContent = 'Download para Android (APK)';
-    modalText.textContent = 'Versão mobile arm64-v8a com controles por toque e mira configurável. Exporte o APK no Godot e hospede-o para liberar o download direto.';
-    modalFile.textContent = 'PixelShooter3D v6.1.apk';
-  }
-  modal.classList.add('open');
-}
-
-document.querySelectorAll('[data-download]').forEach((btn) => {
+document.querySelectorAll('[data-download="android"]').forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
-    openDownloadModal(btn.dataset.download);
+    modal.classList.add('open');
   });
 });
 
